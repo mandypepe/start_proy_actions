@@ -1,0 +1,8 @@
+name: Outputs information about
+on: [push,workflow_call,workflow_dispatch]
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name:  Outputs Github cotext information
+        run: echo "${{ toJSON(github) }}"
