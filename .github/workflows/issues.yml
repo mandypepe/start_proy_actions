@@ -1,0 +1,11 @@
+name: Outputs information about issues events
+on: [push,issues,issue_comment]
+env:
+  ACTIONS_RUNNER_DEBUG: true
+  ACTIONS_STEP_DEBUG: true
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name:  Outputs Github events information details
+        run: echo "${{ toJSON(githu.event) }}"

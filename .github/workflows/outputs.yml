@@ -1,5 +1,8 @@
 name: Outputs information about
 on: [push,workflow_call,workflow_dispatch]
+env:
+  ACTIONS_RUNNER_DEBUG: true
+  ACTIONS_STEP_DEBUG: true
 jobs:
   info:
     runs-on: ubuntu-latest
